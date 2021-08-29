@@ -1,8 +1,7 @@
-package BackEnd;
+package model;
 
-import FiltrosEmpresa.cEmpresa;
+import model.FiltrosEmpresa.cEmpresa;
 
-import javax.persistence.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;

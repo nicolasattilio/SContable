@@ -1,12 +1,11 @@
 package Test;
 
-import BackEnd.*;
+import model.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.Date;
-import java.util.List;
 
 public class Test {
     private static EntityManager manager;
@@ -84,7 +83,7 @@ public class Test {
 
         System.out.println(empr.getEjercicios());
 
-        empr.imprimirMayores(empr.gestionMayores(d3,d4,true,i2,ajustado));
+        //empr.imprimirMayores(empr.gestionMayores(d3,d4,true,i2,ajustado));
 
 
         manager.getTransaction().commit();

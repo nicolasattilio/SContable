@@ -1,6 +1,6 @@
-package BackEnd;
+package model;
 
-import FiltrosEmpresa.cEmpresa;
+import model.FiltrosEmpresa.cEmpresa;
 
 import javax.persistence.*;
 import java.util.*;

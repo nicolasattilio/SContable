@@ -1,6 +1,6 @@
-package FiltrosCuenta;
+package model.FiltrosCuenta;
 
-import BackEnd.Cuenta;
+import model.Cuenta;
 
 public class cNumero implements cCuenta{
     private int numero;

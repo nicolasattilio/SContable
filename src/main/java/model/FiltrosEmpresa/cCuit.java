@@ -1,6 +1,6 @@
-package FiltrosEmpresa;
+package model.FiltrosEmpresa;
 
-import BackEnd.Empresa;
+import model.Empresa;
 
 public class cCuit implements cEmpresa {
     private int cuit;

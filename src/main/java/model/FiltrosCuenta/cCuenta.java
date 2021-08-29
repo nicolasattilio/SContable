@@ -1,6 +1,6 @@
-package FiltrosCuenta;
+package model.FiltrosCuenta;
 
-import BackEnd.Cuenta;
+import model.Cuenta;
 
 public interface cCuenta {
     public boolean cumple(Cuenta c);

@@ -6,15 +6,15 @@
 
 
     <persistence-unit name="SContable">
-        <class>BackEnd.Asiento</class>
-        <class>BackEnd.Cuenta</class>
-        <class>BackEnd.Ejercicio</class>
-        <class>BackEnd.Empresa</class>
-        <class>BackEnd.Imputable</class>
-        <class>BackEnd.MesAjustado</class>
-        <class>BackEnd.NoImputable</class>
-        <class>BackEnd.Perfil</class>
-        <class>BackEnd.SistemaContable</class>
+        <class>model.Asiento</class>
+        <class>model.Cuenta</class>
+        <class>model.Ejercicio</class>
+        <class>model.Empresa</class>
+        <class>model.Imputable</class>
+        <class>model.MesAjustado</class>
+        <class>model.NoImputable</class>
+        <class>model.Perfil</class>
+        <class>model.SistemaContable</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/postgres" />

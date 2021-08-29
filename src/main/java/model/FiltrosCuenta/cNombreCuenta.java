@@ -1,8 +1,6 @@
-package FiltrosCuenta;
+package model.FiltrosCuenta;
 
-import BackEnd.Cuenta;
-
-import java.util.Locale;
+import model.Cuenta;
 
 public class cNombreCuenta implements cCuenta{
     private String nombre;
