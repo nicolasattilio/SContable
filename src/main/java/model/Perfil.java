@@ -6,17 +6,17 @@ import javax.persistence.*;
 @Table(name="PERFIL")
 public class Perfil {
     @Id
-    @Column(name="ID_PERFIL")
-    private int id;
     @Column(name="LOGIN")
     private String login;
     @Column(name="PASS")
-    private int pass;
+    private String pass;
+    @Column(name="NIVEL")
+    private int nivel;
 
-    public Perfil(int id,String login,int pass){
-        this.id=id;
+    public Perfil(String login,String pass,int nivel){
         this.login=login;
         this.pass=pass;
+        this.nivel=nivel;
     }
 
     public Perfil() {
@@ -35,7 +35,11 @@ public class Perfil {
         return login;
     }
 
-    public int getPass() {
+    public String getPass() {
         return pass;
+    }
+
+    public int getNivel() {
+        return nivel;
     }
 }
