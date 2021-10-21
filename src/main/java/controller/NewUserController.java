@@ -2,7 +2,6 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -25,7 +24,7 @@ public class NewUserController {
         Main m= new Main();
         try {
             if((pass.equals(checkPass)) || !user.isEmpty() || !!pass.isEmpty()) {
-                Perfil p = new Perfil(user, pass,2);
+                Perfil p = new Perfil(user, pass,3);
                 Main.perfilLogged = Main.manager.find(Perfil.class, user);
                 if (Main.perfilLogged == null) {
                     m.createNewPerfil(p);

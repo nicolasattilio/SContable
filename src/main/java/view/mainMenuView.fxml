@@ -1,14 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.MainMenuController"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
+  <items>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="btnEmpresa" layoutX="57.0" layoutY="96.0" mnemonicParsing="false" onAction="#loadEmpresas" text="Empresa" />
+            <Button layoutX="57.0" layoutY="131.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="57.0" layoutY="161.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="57.0" layoutY="196.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="57.0" layoutY="229.0" mnemonicParsing="false" text="Button" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+          <AnchorPane fx:id="AnchorEmpresa" layoutX="5.0" layoutY="5.0" minHeight="0.0" minWidth="0.0" prefHeight="391.0" prefWidth="417.0" visible="false">
+               <children>
+                  <TextField fx:id="textSearchEmpresa" layoutX="85.0" layoutY="91.0" />
+                  <Button fx:id="btnFilterEmpresa" layoutX="280.0" layoutY="91.0" mnemonicParsing="false" onAction="#searchEmpresas" text="Buscar" />
+                  <Button fx:id="btnCreateEmpresa" layoutX="56.0" layoutY="234.0" mnemonicParsing="false" onAction="#CreateEmpresa" prefHeight="24.0" prefWidth="140.0" text="Crear Empresa" />
+                  <Button fx:id="btnModifyEmpresa" layoutX="56.0" layoutY="268.0" mnemonicParsing="false" onAction="#ModifyEmpresa" text="Modificar Empresa" />
+                  <Button fx:id="btnEliminarEmpresa" layoutX="56.0" layoutY="304.0" mnemonicParsing="false" onAction="#EliminarEmpresa" prefHeight="24.0" prefWidth="140.0" text="Eliminar Empresa" />
+                  <Label fx:id="idNombreEmpresa" layoutX="56.0" layoutY="144.0" text="Nombre Empresa:" visible="false" />
+                  <Label fx:id="idCuit" layoutX="56.0" layoutY="166.0" text="Cuit:" visible="false" />
+                  <Label fx:id="idDirTel" layoutX="56.0" layoutY="188.0" text="Direccion y telefono:" visible="false" />
+                  <Label fx:id="idLabelNombre" layoutX="209.0" layoutY="144.0" />
+                  <Label fx:id="idLabelCuit" layoutX="209.0" layoutY="166.0" />
+                  <Label fx:id="idLabelDirTel" layoutX="209.0" layoutY="188.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="AnchorNewEmpresa" prefHeight="391.0" prefWidth="417.0" visible="false">
+               <children>
+                  <TextField fx:id="newCuit" layoutX="38.0" layoutY="71.0" />
+                  <TextField fx:id="newNameEmpresa" layoutX="38.0" layoutY="120.0" />
+                  <TextField fx:id="newDirectionEmpresa" layoutX="38.0" layoutY="172.0" />
+                  <TextField fx:id="newLocationEmpresa" layoutX="38.0" layoutY="223.0" />
+                  <TextField fx:id="newTelephoneEmpresa" layoutX="38.0" layoutY="272.0" />
+                  <Button fx:id="btnMakeEmpresa" layoutX="151.0" layoutY="334.0" mnemonicParsing="false" onAction="#MakeEmpresa" text="Crear Empresa" />
+                  <Label layoutX="269.0" layoutY="75.0" text="Cuit" />
+                  <Label layoutX="269.0" layoutY="124.0" text="Nombre Empresa" />
+                  <Label layoutX="269.0" layoutY="176.0" text="Direccion" />
+                  <Label layoutX="269.0" layoutY="227.0" text="Localidad" />
+                  <Label layoutX="269.0" layoutY="276.0" text="Telefono" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="AnchorModifyEmpresa" prefHeight="401.0" prefWidth="427.0" visible="false">
+               <children>
+                  <TextField fx:id="modCuit" layoutX="38.0" layoutY="71.0" />
+                  <TextField fx:id="modNombreEmpresa" layoutX="38.0" layoutY="120.0" />
+                  <TextField fx:id="modDireccionEmpresa" layoutX="38.0" layoutY="172.0" />
+                  <TextField fx:id="modLocalidadEmpresa" layoutX="38.0" layoutY="223.0" />
+                  <TextField fx:id="modTelefonoEmpresa" layoutX="38.0" layoutY="272.0" />
+                  <Button fx:id="btnModEmpresa" layoutX="151.0" layoutY="334.0" mnemonicParsing="false" onAction="#ModEmpresa" text="Modificar Empresa" />
+                  <Label layoutX="269.0" layoutY="75.0" text="Cuit" />
+                  <Label layoutX="269.0" layoutY="124.0" text="Nombre Empresa" />
+                  <Label layoutX="269.0" layoutY="176.0" text="Direccion" />
+                  <Label layoutX="269.0" layoutY="227.0" text="Localidad" />
+                  <Label layoutX="269.0" layoutY="276.0" text="Telefono" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="AnchorEliminateEmpresa" minHeight="0.0" minWidth="0.0" prefHeight="401.0" prefWidth="427.0" visible="false">
+               <children>
+                  <TextField fx:id="elimCuit" layoutX="92.0" layoutY="97.0" />
+                  <Button fx:id="btnFilterEliminateEmpresa" layoutX="284.0" layoutY="97.0" mnemonicParsing="false" onAction="#searchEliminateEmpresas" text="Buscar" />
+                  <Button fx:id="btnEliminateEmpresa" layoutX="61.0" layoutY="239.0" mnemonicParsing="false" onAction="#EliminateEmpresa" prefHeight="24.0" prefWidth="140.0" text="Eliminar Empresa" />
+                  <Label fx:id="labelEliminateIdCuit" layoutX="85.0" layoutY="145.0" />
+                  <Label fx:id="laberEliminateNombreEmpresa" layoutX="85.0" layoutY="172.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="AnchorMsg" prefHeight="401.0" prefWidth="427.0" visible="false" />
+            <Label fx:id="TextMainMenu" layoutX="101.0" layoutY="145.0" prefHeight="16.0" prefWidth="216.0" textAlignment="CENTER" />
+         </children>
+      </AnchorPane>
+  </items>
+</SplitPane>

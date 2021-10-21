@@ -10,22 +10,22 @@ import java.util.*;
 
 public class Empresa extends SistemaContable {
     @Id
-    @Column(name="idCuit")
+    @Column(name="IDCUIT")
     private int cuit;
     @ElementCollection
-    @JoinColumn(name="codigoCuentaEmpresa")
+    @JoinColumn(name="CODIGOCUENTAEMPRESA")
     private List<Cuenta> planCuentas=new ArrayList<>();
     @ElementCollection
-    @JoinColumn(name="numeroEjercicio")
+    @JoinColumn(name="NROEJERCICIO")
     private List<Ejercicio>ejercicios=new ArrayList<>();
 
-    @Column(name="nombreEmpresa")
+    @Column(name="NOMBREEMPRESA")
     private String nombreEmpresa;
-    @Column(name="direccion")
+    @Column(name="DIRECCION")
     private String direccion;
-    @Column(name="localidad")
+    @Column(name="LOCALIDAD")
     private String localidad;
-    @Column(name="telefono")
+    @Column(name="TELEFONO")
     private String telefono;
 
 
@@ -189,5 +189,15 @@ public class Empresa extends SistemaContable {
     public String getTelefono() {
         return telefono;
     }
+
+    public void setValores(Empresa e) {
+        this.cuit=e.getCuit();
+        this.nombreEmpresa=e.getNombreEmpresa();
+        this.direccion=e.getDireccion();
+        this.localidad=e.getLocalidad();
+        this.telefono=e.getTelefono();
+    }
+
+
 }
 
